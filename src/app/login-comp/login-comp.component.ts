@@ -29,10 +29,10 @@ export class LoginCompComponent implements OnInit {
     console.log("first console log", apigClientFactory);
     let something = apigClientFactory.newClient();
     var awsConfig = {
-      region: 'us-east-1',
-      IdentityPoolId: 'us-east-1:87b000cc-4720-41e6-a422-aa4d3a5ed544',
-      UserPoolId: 'us-east-1_GFaGz2chu',
-      ClientId: '2fciveui4031ctrcv2rc6flrej'
+      region: ---,
+      IdentityPoolId: ---,
+      UserPoolId: ---,
+      ClientId: ---
     }
 
     var authenticationData = {
