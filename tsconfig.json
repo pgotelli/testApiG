@@ -1,6 +1,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowJs": true,
+    "include": "./src/assets/",
+    "types": ["node"],
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,

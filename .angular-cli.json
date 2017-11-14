@@ -21,7 +21,12 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": ["assets/apigwsdk/apigClient.js", "assets/apigwsdk/lib/axios/dist/axios.standalone.js",
+      "assets/apigwsdk/lib/CryptoJS/rollups/hmac-sha256.js", "assets/apigwsdk/lib/CryptoJS/rollups/sha256.js",
+      "assets/apigwsdk/lib/CryptoJS/components/hmac.js", "assets/apigwsdk/lib/CryptoJS/components/enc-base64.js",
+      "assets/apigwsdk/lib/url-template/url-template.js", "assets/apigwsdk/lib/apiGatewayCore/sigV4Client.js",
+      "assets/apigwsdk/lib/apiGatewayCore/apiGatewayClient.js", "assets/apigwsdk/lib/apiGatewayCore/simpleHttpClient.js",
+      "assets/apigwsdk/lib/apiGatewayCore/utils.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
