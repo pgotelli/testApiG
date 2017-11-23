@@ -29,10 +29,10 @@ export class LoginCompComponent implements OnInit {
     console.log("first console log", apigClientFactory);
     let something = apigClientFactory.newClient();
     var awsConfig = {
-      region: ---,
-      IdentityPoolId: ---,
-      UserPoolId: ---,
-      ClientId: ---
+      region: 'us-east-1',
+      IdentityPoolId: 'us-east-1:87b000cc-4720-41e6-a422-aa4d3a5ed544',
+      UserPoolId: 'us-east-1_GFaGz2chu',
+      ClientId: '2fciveui4031ctrcv2rc6flrej'
     }
 
     var authenticationData = {
@@ -118,7 +118,28 @@ export class LoginCompComponent implements OnInit {
                 };
 
                 let apigClient = apigClientFactory.newClient(clientParams); //TODO: revisar como incluir esto
-                apigClient.jobsListGet({userId : ''}).then((response) => {
+                let job = {
+                   "projectId": "P-OKW254",
+                   "externalId": "JOB10",
+                   "customerName": "JOB10",
+                   "status": "JOB_NEW",
+                   "requestedDueDate":1509552000000,
+                   "currentDueDate":1509552000000,
+                   "actualDuration": 1800000,
+                   "estimatedDuration": 1800000,
+        //            "latitude": -34.9137939,
+        //            "longitude": -57.9934855,
+        //            "address": "Estadio Ciudad de La Plata",
+        //            "city": "La Plata",
+        //            "state": "Buenos Aires",
+        //            "zipCode": "1900"
+                    "assignee": {
+                      "userName": "rmtest330",
+                      "userId": "cognito-idp.us-east-1.amazonaws.com:us-east-1_GFaGz2chu:49b2b964-116e-4467-a65e-602541498f03"
+                    },
+                    "taskDefinitionId" : "P-OKW254_$_18da2efd-4a73-4492-b88c-8c8f63f257ab"
+                }
+                apigClient.externaljobsPost('', job, '').then((response) => {
 
                   console.log("se encontro la data buscada", response);
 

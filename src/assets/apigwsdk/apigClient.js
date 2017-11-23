@@ -12,7 +12,7 @@
  * express or implied. See the License for the specific language governing
  * permissions and limitations under the License.
  */
-console.log(1);
+
 var apigClientFactory = {};
 apigClientFactory.newClient = function (config) {
     var apigClient = { };
@@ -278,6 +278,60 @@ apigClientFactory.newClient = function (config) {
 
 
         return apiGatewayClient.makeRequest(emailvalidationActivationcodeOptionsRequest, authType, additionalParams, config.apiKey);
+    };
+
+
+    apigClient.externaljobsPut = function (params, body, additionalParams) {
+        if(additionalParams === undefined) { additionalParams = {}; }
+
+        apiGateway.core.utils.assertParametersDefined(params, [], ['body']);
+
+        var externaljobsPutRequest = {
+            verb: 'put'.toUpperCase(),
+            path: pathComponent + uritemplate('/externaljobs').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
+            headers: apiGateway.core.utils.parseParametersToObject(params, []),
+            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
+            body: body
+        };
+
+
+        return apiGatewayClient.makeRequest(externaljobsPutRequest, authType, additionalParams, config.apiKey);
+    };
+
+
+    apigClient.externaljobsPost = function (params, body, additionalParams) {
+        if(additionalParams === undefined) { additionalParams = {}; }
+
+        apiGateway.core.utils.assertParametersDefined(params, [], ['body']);
+
+        var externaljobsPostRequest = {
+            verb: 'post'.toUpperCase(),
+            path: pathComponent + uritemplate('/externaljobs').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
+            headers: apiGateway.core.utils.parseParametersToObject(params, []),
+            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
+            body: body
+        };
+
+
+        return apiGatewayClient.makeRequest(externaljobsPostRequest, authType, additionalParams, config.apiKey);
+    };
+
+
+    apigClient.externaljobsOptions = function (params, body, additionalParams) {
+        if(additionalParams === undefined) { additionalParams = {}; }
+
+        apiGateway.core.utils.assertParametersDefined(params, [], ['body']);
+
+        var externaljobsOptionsRequest = {
+            verb: 'options'.toUpperCase(),
+            path: pathComponent + uritemplate('/externaljobs').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
+            headers: apiGateway.core.utils.parseParametersToObject(params, []),
+            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
+            body: body
+        };
+
+
+        return apiGatewayClient.makeRequest(externaljobsOptionsRequest, authType, additionalParams, config.apiKey);
     };
 
 
