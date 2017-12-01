@@ -36,8 +36,8 @@ export class LoginCompComponent implements OnInit {
     }
 
     var authenticationData = {
-        Username : 'pgotelli7',
-        Password : 'Pgotelli7',
+        Username : 'pablo5',//pgotelli7
+        Password : 'Pablo123',//Pgotelli7
     };
     var authenticationDetails = new AuthenticationDetails(authenticationData);
     var poolData = {
@@ -119,7 +119,7 @@ export class LoginCompComponent implements OnInit {
 
                 let apigClient = apigClientFactory.newClient(clientParams); //TODO: revisar como incluir esto
                 let job = {
-                   "projectId": "P-OKW254",
+                   "projectId": "P-RDR178",
                    "externalId": "JOB10",
                    "customerName": "JOB10",
                    "status": "JOB_NEW",
@@ -133,11 +133,11 @@ export class LoginCompComponent implements OnInit {
         //            "city": "La Plata",
         //            "state": "Buenos Aires",
         //            "zipCode": "1900"
-                    "assignee": {
+                    /*"assignee": {
                       "userName": "rmtest330",
                       "userId": "cognito-idp.us-east-1.amazonaws.com:us-east-1_GFaGz2chu:49b2b964-116e-4467-a65e-602541498f03"
-                    },
-                    "taskDefinitionId" : "P-OKW254_$_18da2efd-4a73-4492-b88c-8c8f63f257ab"
+                    },*/
+                    "taskDefinitions" : ["P-RDR178_$_1557c708-d334-4972-b2d0-56e52ba8d39e"]
                 }
                 apigClient.externaljobsPost('', job, '').then((response) => {
 
